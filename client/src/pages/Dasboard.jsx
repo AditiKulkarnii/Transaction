@@ -17,7 +17,7 @@ const Dashboard = () => {
 
   const fetchTransactions = async () => {
     try {
-      const response = await axios.get('/api/list-transactions', {
+      const response = await axios.get('https://transaction-server.vercel.app/list-transactions', {
         params: { month, search, page, perPage }
       });
       setTransactions(response.data.transactions);
