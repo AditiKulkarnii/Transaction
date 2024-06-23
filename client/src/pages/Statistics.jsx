@@ -20,9 +20,9 @@ const Statistics = () => {
       setLoading(true);
 
       const [statisticsResponse, barChartResponse, pieChartResponse] = await Promise.all([
-        axios.get('/api/statistics', { params: { month } }),
-        axios.get('/api/bar-chart', { params: { month } }),
-        axios.get('/api/pie-chart', { params: { month } }),
+        axios.get('https://transaction-server.vercel.app/statistics', { params: { month } }),
+        axios.get('https://transaction-server.vercel.app/bar-chart', { params: { month } }),
+        axios.get('https://transaction-server.vercel.app/pie-chart', { params: { month } }),
       ]);
 
       setStats(statisticsResponse.data);
