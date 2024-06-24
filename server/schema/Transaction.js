@@ -8,7 +8,7 @@ const transactionSchema = mongoose.Schema({
     category: String,
     image: String,
     sold: Boolean,
-    dateOfSale: String  // Assuming dateOfSale is stored as a string in the format shown
+    dateOfSale: String  
 });
 
 export default mongoose.model('Transaction', transactionSchema);
