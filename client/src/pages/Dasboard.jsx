@@ -21,7 +21,7 @@ const Dashboard = () => {
         params: { month, search, page, perPage }
       });
       setTransactions(response.data.transactions);
-      setTotalTransactions(response.data.total); // Assuming the API returns the total number of transactions
+      setTotalTransactions(response.data.total); 
     } catch (error) {
       console.error("Error fetching transactions:", error);
     }
@@ -56,7 +56,7 @@ const Dashboard = () => {
   };
 
   const handleViewStats = () => {
-    // Handle click to view stats
+   
     navigate("/statistics");
   };
 
