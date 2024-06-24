@@ -82,9 +82,9 @@ const Statistics = () => {
 
       <div className="stats-box p-4 bg-yellow-100 rounded mb-4">
         <h2 className="text-xl font-semibold">Statistics - {month}</h2>
-        <p>Total sale: {stats.totalSale}</p>
-        <p>Total sold items: {stats.totalSoldItems}</p>
-        <p>Total not sold items: {stats.totalNotSoldItems}</p>
+        <p>Total sale: {stats.totalSaleAmount}</p>
+        <p>Total sold items: {stats.soldItemsCount}</p>
+        <p>Total not sold items: {stats.notSoldItemsCount}</p>
       </div>
 
       <div className="mb-8">
