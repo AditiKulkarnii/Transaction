@@ -3,7 +3,7 @@ import axios from 'axios';
 import Transaction from '../schema/Transaction.js';
 import moment from 'moment-timezone'; 
 
-
+//initialize database with 3rd party api
 export const initializeDatabase = async (req, res) => {
   try {
     const response = await axios.get('https://s3.amazonaws.com/roxiler.com/product_transaction.json');
@@ -17,7 +17,7 @@ export const initializeDatabase = async (req, res) => {
 };
 
 
-
+//listing the transactions with pagination and search by month
 export const listTransactions = async (req, res) => {
   try {
     let { month, page = 1, perPage = 10, search = '' } = req.query;
